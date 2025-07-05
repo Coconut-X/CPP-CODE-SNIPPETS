@@ -1,65 +1,136 @@
-# cpp-code-snippets README
+# C++ Code Snippets (By Ali Imran)
 
-This is the README for your extension "cpp-code-snippets". After writing up a brief description, we recommend including the following sections.
+**Tired of typing common C++ boilerplate and repetitive code structures?** This VS Code extension provides a comprehensive collection of essential C++ code snippets designed to boost your productivity in competitive programming, general development, and daily coding tasks. Spend less time writing boilerplate and more time solving problems!
 
-## Features
+## ✨ Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+This extension provides a rich set of snippets for various C++ programming needs:
 
-For example if there is an image subfolder under your extension project workspace:
+### 🚀 **Competitive Programming Kickstart**
+Get ready for competitive programming challenges in an instant.
 
-\!\[feature X\]\(images/feature-x.png\)
+* **Boilerplate (Prefix: `boilerplate_comp`)**: Inserts a full competitive programming setup, including a wide range of standard headers, common `using` declarations, fast I/O macros, and type aliases.
+    ```cpp
+    // Example output for 'boilerplate_comp'
+    #include <iostream>
+    #include <string>
+    // ... many more includes ...
+    using namespace std;
+    using ll = long long;
+    #define fastc ios::sync_with_stdio(false); cin.tie(nullptr);
+    #define endl '\n'
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+    int main(){
+        fastc;
+        cout<<"I'm Coconut"<<endl; // Or your default main content
+        return 0;
+    }
+    ```
+* **Basic Boilerplate (Prefix: `boilerplate`)**: A simpler "Hello, World!" boilerplate for quick starts.
+    ```cpp
+    // Example output for 'boilerplate'
+    #include <iostream>
+    using namespace std;
 
-## Requirements
+    int main() {
+        cout << "Hello, World!" << endl;
+        return 0;
+    }
+    ```
+* **Main Function (Prefix: `main`)**: Inserts a standard `int main() {}` structure.
+    ```cpp
+    // Example output for 'main'
+    int main() {
+        // Your code here
+        return 0;
+    }
+    ```
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+### 💬 **Smart `cout` Statements**
+Streamline your output with multi-variable `cout` snippets.
 
-## Extension Settings
+* **`cout` (Prefix: `cout`)**: `cout << variable << endl;`
+* **`cout2` (Prefix: `cout2`)**: `cout << var1 << var2 << endl;`
+* **`cout3` (Prefix: `cout3`)**: `cout << var1 << var2 << var3 << endl;`
+* **`cout4` (Prefix: `cout4`)**: `cout << var1 << var2 << var3 << var4 << endl;`
+* **`cout5` (Prefix: `cout5`)**: `cout << var1 << var2 << var3 << var4 << var5 << endl;`
+    > *Usage Tip*: Type `cout` then `Tab`, fill in the variable. For multiple variables, append the number, e.g., `cout3` and hit `Tab` to navigate through placeholders.
+    
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+### 🔢 **Control Flow & Structures**
+Quickly generate common C++ constructs.
 
-For example:
+* **Integer For Loop (Prefix: `fori`)**: A standard `for (int i = 0; i < n; ++i) {}` loop.
+* **Class Template (Prefix: `class`)**: Inserts a basic C++ class definition with constructor and destructor placeholders.
+* **Scoped Enum (Prefix: `enum_class`)**: Defines a type-safe `enum class`.
+* **Try-Catch Block (Prefix: `tryc`)**: Inserts a `try-catch` block for exception handling.
+* **Lambda Function (Prefix: `lambda`)**: A versatile template for C++ lambda expressions.
 
-This extension contributes the following settings:
+### 📊 **Vector Utilities**
+Efficiently work with `std::vector`s.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+* **Declare Vector (Prefix: `vec`)**: `vector<int> name;`
+* **Declare Vector with Size (Prefix: `vecs`)**: `vector<int> name(size);`
+* **Declare Vector with Size & Value (Prefix: `vecsv`)**: `vector<int> name(size, value);`
+* **2D Vector (Prefix: `vec2d`)**: `vector<vector<int>> name(rows, vector<int>(cols, 0));`
+* **Vector For Loop (Index) (Prefix: `vfor`)**: Iterate using an index-based `for` loop.
+* **Vector For Loop (Range) (Prefix: `vforr`)**: Iterate using a range-based `for` loop.
+* **Sort Vector (Prefix: `sortv`)**: `sort(vec.begin(), vec.end());`
+* **Reverse Vector (Prefix: `reversev`)**: `reverse(vec.begin(), vec.end());`
 
-## Known Issues
+### 🐛 **Debugging Aid**
+Simplify adding debug print statements.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+* **Debug Print (Prefix: `dbg`)**: Inserts `cerr << "DEBUG: var_name = " << var_name << endl;`
+---
 
-## Release Notes
+## 🚀 Installation
 
-Users appreciate release notes as you update your extension.
+1.  Open VS Code.
+2.  Go to the Extensions view (`Ctrl+Shift+X` or `Cmd+Shift+X`).
+3.  Search for "C++ Code Snippets" (or `cpp-code-snippets`).
+4.  Click "Install".
 
-### 1.0.0
+## 🛠️ Requirements
 
-Initial release of ...
+* Visual Studio Code (version `1.101.0` or higher, as per your `package.json`).
+* A C++ extension like "C/C++ Extension Pack" by Microsoft is recommended for full language support and IntelliSense, though snippets will work independently.
 
-### 1.0.1
+## ⚙️ Extension Settings
 
-Fixed issue #.
+This extension does not contribute any specific VS Code settings.
 
-### 1.1.0
+## ⚠️ Known Issues
 
-Added features X, Y, and Z.
+Currently, there are no known issues. If you encounter any problems, please open an issue on the [GitHub repository](https://github.com/Coconut-X/CPP-CODE-SNIPPETS/issues).
+
+## 📄 Release Notes
+
+### 0.0.1 (July 5, 2025)
+* Initial release of C++ Code Snippets.
+* Includes comprehensive competitive programming boilerplate.
+* Smart `cout` statements (`cout`, `cout2`, `cout3`, `cout4`, `cout5`).
+* Snippets for common control flow (for loops, class, enum class, try-catch, lambda).
+* Vector utility snippets (declaration, 2D, iteration, sort, reverse).
+* Basic debug print macro.
 
 ---
 
-## Working with Markdown
+## Contributing
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+Contributions are welcome! If you have ideas for new snippets or improvements to existing ones, please feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/Coconut-X/CPP-CODE-SNIPPETS).
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+## License
+
+This extension is licensed under the [MIT License](https://github.com/Coconut-X/CPP-CODE-SNIPPETS/blob/main/LICENSE). (You'll need to add a LICENSE file to your repo if you want to explicitly state this.)
+
+---
+
+**Enjoy coding with C++ Code Snippets!**
+
+---
 
 ## For more information
 
 * [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+* [Markdown Syntax Reference](https://www.markdownguide.org/basic-syntax/)

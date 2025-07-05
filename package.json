@@ -3,6 +3,7 @@
   "displayName": "C++ Code Snippets",
   "description": "Commonly Used C++ Code Snippets",
   "version": "0.0.1",
+  "publisher": "AliImran",
   "icon": "/public/icon.png",
   "engines": {
     "vscode": "^1.101.0"
@@ -10,6 +11,10 @@
   "categories": [
     "Snippets"
   ],
+  "repository": { 
+    "type": "git",
+    "url": "https://github.com/Coconut-X/CPP-CODE-SNIPPETS.git"
+  },
   "contributes": {
     "snippets": [
       {
