@@ -1,0 +1,234 @@
+{
+    "cpp_boilerplate": {
+        "prefix": "boilerplate",
+        "body": [
+            "#include <iostream>",
+            "using namespace std;",
+            "",
+            "int main() {",
+            "    cout << \"Hello, World!\" << endl;",
+            "    return 0;",
+            "}"
+        ],
+        "description": "Basic C++ Hello World Program"
+    },
+
+    "cpp_boilerplate_for_competitive_programming": {
+        "prefix": "boilerplate_comp",
+        "body": [
+            "#include <iostream>",
+            "#include <string>",
+            "#include <vector>",
+            "#include <algorithm>",
+            "#include <cmath>",
+            "#include <stack>",
+            "#include <queue>",
+            "#include <map>",
+            "#include <set>",
+            "#include <bitset>",
+            "#include <deque>",
+            "#include <list>",
+            "#include <climits>",
+            "#include <sstream>",
+            "#include <cstring>",
+            "#include <unordered_set>",
+            "#include <unordered_map>",
+            "#include <numeric>",
+            "using namespace std;",
+            "",
+            "using ll = long long;",
+            "using vi = vector<int>;",
+            "using vll = vector<ll>;",
+            "#define fastc ios::sync_with_stdio(false); cin.tie(nullptr);",
+            "#define endl '\\n'",
+            "",
+            "int main(){",
+            "    fastc;",
+            "    cout<<\"I'm Coconut\"<<endl;",
+            "    return 0;",
+            "}"
+        ],
+        "description": "C++ Boilerplate for Competitive Programming"
+    },
+
+    "main_function": {
+        "prefix": "main",
+        "body": [
+            "int main() {",
+            "    $0",
+            "    return 0;",
+            "}"
+        ],
+        "description": "Standard C++ main function"
+    },
+
+    "cpp_class": {
+        "prefix": "class",
+        "body": [
+            "class ${1:ClassName} {",
+            "public:",
+            "    ${1:ClassName}();",
+            "    ~${1:ClassName}();",
+            "",
+            "private:",
+            "    $2",
+            "};"
+        ],
+        "description": "C++ Class Template"
+    },
+
+    "scoped_enum": {
+        "prefix": "enum_class",
+        "body": [
+            "enum class ${1:MyEnum} {",
+            "    ${2:VALUE1},",
+            "    ${3:VALUE2}",
+            "};$0"
+        ],
+        "description": "C++ Scoped Enum Class Definition"
+    },
+
+    "try_catch_block": {
+        "prefix": "tryc",
+        "body": [
+            "try {",
+            "    $1",
+            "} catch (const ${2:std::exception}& ${3:e}) {",
+            "    cerr << \"Error: \" << ${3:e}.what() << endl;$0",
+            "}"
+        ],
+        "description": "C++ Try-Catch Exception Handling Block"
+    },
+
+    "for_loop_int": {
+        "prefix": "fori",
+        "body": [
+            "for (int ${1:i} = ${2:0}; ${1:i} < ${3:n}; ++${1:i}) {",
+            "    $0",
+            "}"
+        ],
+        "description": "Standard integer for loop"
+    },
+
+    "cout_one_variable": {
+        "prefix": "cout",
+        "body": [
+            "cout << ${1:variable} << endl;$0"
+        ],
+        "description": "C++ cout statement for one variable"
+    },
+    "cout_two_variables": {
+        "prefix": "cout2",
+        "body": [
+            "cout << ${1:var1} << ${2:var2} << endl;$0"
+        ],
+        "description": "C++ cout statement for two variables"
+    },
+    "cout_three_variables": {
+        "prefix": "cout3",
+        "body": [
+            "cout << ${1:var1} << ${2:var2} << ${3:var3} << endl;$0"
+        ],
+        "description": "C++ cout statement for three variables"
+    },
+    "cout_four_variables": {
+        "prefix": "cout4",
+        "body": [
+            "cout << ${1:var1} << ${2:var2} << ${3:var3} << ${4:var4} << endl;$0"
+        ],
+        "description": "C++ cout statement for four variables"
+    },
+    "cout_five_variables": {
+        "prefix": "cout5",
+        "body": [
+            "cout << ${1:var1} << ${2:var2} << ${3:var3} << ${4:var4} << ${5:var5} << endl;$0"
+        ],
+            "description": "C++ cout statement for five variables"
+    },
+
+    "debug_print_macro": {
+        "prefix": "dbg",
+        "body": [
+            "cerr << \"DEBUG: ${1:var_name} = \" << ${1:var_name} << endl;$0"
+        ],
+        "description": "Inserts a debug print statement (cerr with variable name and value)"
+    },
+
+    "vector_declare": {
+        "prefix": "vec",
+        "body": [
+            "vector<${1:int}> ${2:name};$0"
+        ],
+        "description": "Declare an empty vector"
+    },
+
+    "vector_declare_size": {
+        "prefix": "vecs",
+        "body": [
+            "vector<${1:int}> ${2:name}(${3:size});$0"
+        ],
+        "description": "Declare vector with initial size"
+    },
+
+    "vector_declare_size_val": {
+        "prefix": "vecsv",
+        "body": [
+            "vector<${1:int}> ${2:name}(${3:size}, ${4:value});$0"
+        ],
+        "description": "Declare vector with initial size and default value"
+    },
+
+    "vector_of_vectors": {
+        "prefix": "vec2d",
+        "body": [
+            "vector<vector<${1:int}>> ${2:name}(${3:rows}, vector<${1:int}>(${4:cols}, ${5:0}));$0"
+        ],
+        "description": "Declare a 2D vector (vector of vectors)"
+    },
+
+    "vector_for_index": {
+        "prefix": "vfor",
+        "body": [
+            "for (size_t ${1:i} = 0; ${1:i} < ${2:vec_name}.size(); ++${1:i}) {",
+            "    ${2:vec_name}[${1:i}];$0",
+            "}"
+        ],
+        "description": "Iterate vector using index-based for loop"
+    },
+
+    "vector_for_range": {
+        "prefix": "vforr",
+        "body": [
+            "for (const auto& ${1:element} : ${2:vec_name}) {",
+            "    $0",
+            "}"
+        ],
+        "description": "Iterate vector using range-based for loop"
+    },
+
+    "vector_sort": {
+        "prefix": "sortv",
+        "body": [
+            "sort(${1:vec_name}.begin(), ${1:vec_name}.end());$0"
+        ],
+        "description": "Sorts a vector in ascending order"
+    },
+
+    "vector_reverse": {
+        "prefix": "reversev",
+        "body": [
+            "reverse(${1:vec_name}.begin(), ${1:vec_name}.end());$0"
+        ],
+        "description": "Reverses a vector"
+    },
+
+    "lambda_function_template": {
+        "prefix": "lambda",
+        "body": [
+            "[${1:captures}](${2:params}) ${3:mutable} ${4:-> ReturnType} {",
+            "    $0",
+            "}"
+        ],
+        "description": "C++ Lambda Function Template"
+    },
+}
